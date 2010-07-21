@@ -1,0 +1,5 @@
+-@result["groups"][0]["venues"].each do |v|
+  %li.arrow
+    =link_to v["name"], venue_fs_path(:id => v["id"])
+    %small.counter=v["stats"]["herenow"]
+    -#=link_to v["address"], venue_fs_path(:id => v["id"])

@@ -1,0 +1,5 @@
+log/*.log
+tmp/**/*
+config/initializers/soundcloud.rb
+config/initializers/foursquare.rb
+

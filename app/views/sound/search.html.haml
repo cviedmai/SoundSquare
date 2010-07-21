@@ -1,0 +1,15 @@
+-form_remote_tag :url => search_fs_sound_path, :id => "scsearch", :method => :post, |
+ :update => "searchResults" do |
+  =hidden_field_tag("venue", @venue) if @venue
+  .toolbar
+    =link_to "Back", nil, :class => "back"
+    %h1
+      Search
+    =link_to "login", login_fs_path, :class => "button"
+  %ul.rounded
+    %li=text_field_tag :query, nil, :placeholder => "Search"
+
+  %ul.rounded{:id => "searchResults"}
+
+  .info
+    Tracks from Soundcloud

@@ -1,0 +1,28 @@
+-v = @venue["venue"]
+
+%div{:id => v["id"]}
+  .toolbar
+    =link_to "Nearby", nil, :class => "back"
+    %h1
+      =v["name"]
+    =link_to "login", login_fs_path, :class => "button"
+    -#=link_to "refresh", "#!refresh", :class => "refresh button"
+
+  %h2
+    =v["name"]
+  %ul
+    %li==Address: #{v["address"]}
+    %li==Here now: #{v["stats"]["herenow"]}
+  %h2
+    Sound tracks
+  %ul
+    -@sounds.each do |s|
+      %li.arrow
+        =link_to s.name, track_fs_sound_path(:id => s.track)
+
+  %ul.individual
+    %li= link_to "Checkin here", search_fs_path
+    %li= link_to "Add a new track", search_fs_sound_path(:venue => v["id"])
+      
+  .info
+    soundsquare = soundcloud + foursquare

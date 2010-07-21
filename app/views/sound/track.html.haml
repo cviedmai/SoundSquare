@@ -1,0 +1,22 @@
+-t = @track
+%div{:id => t.id}
+  .toolbar
+    =link_to "back", nil, :class => "back"
+    %h1
+      =t.title
+    =link_to "login", login_fs_path, :class => "button"
+  %ul.rounded
+    %li=t.title
+    %li== By #{t.user.username}
+    %li=t.description
+    %li==#{t.bpm} bpms
+
+  -if @venue
+    -form_remote_tag :url => addtrack_fs_path, :id => "addtrack", |
+    :update => "addtrack" do |
+      =hidden_field_tag "venueid", @venue
+      =hidden_field_tag "trackid", t.id
+      =hidden_field_tag "trackname", t.title
+      =render :partial => "foursquare/addtrack"
+  .info
+    Track information from Soundcloud

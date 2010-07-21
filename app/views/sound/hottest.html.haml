@@ -1,0 +1,11 @@
+#hottest
+  .toolbar
+    =link_to "Home", nil, :class => "back"
+    %h1
+      soundsquare
+    =link_to "login", nil, :class => "button"
+  %ul.round
+    -@hot_tracks.each do |t|
+      %li.arrow= link_to t.title, track_fs_sound_path(:id => t.id)
+  .info
+    Hottest tracks in SoundCloud
