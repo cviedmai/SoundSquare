@@ -10,7 +10,8 @@
     %li== By #{t.user.username}
     %li=t.description
     %li==#{t.bpm} bpms
-
+    %li
+      %audio{:src=>t.stream_url, :controls => "", :autoplay => ""}
   -if @venue
     -form_remote_tag :url => addtrack_fs_path, :id => "addtrack", |
     :update => "addtrack" do |

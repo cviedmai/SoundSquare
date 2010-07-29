@@ -1,0 +1,5 @@
+SoundSquare lets you attach SoundCloud tracks to FourSquare venues and listen to what others have put.
+
+You have to define your consumer Key and Consumer secret codes for the API access to SoundCloud and FourSquare as environmental variables.
+The variables are: ENV['SC_CONSUMER_TOKEN'], ENV['SC_CONSUMER_SECRET'], ENV['FS_CONSUMER_TOKEN'] and ENV['FS_CONSUMER_SECRET']
+

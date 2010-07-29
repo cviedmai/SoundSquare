@@ -46,6 +46,7 @@ class FoursquareController < ApplicationController
 
     if !lat or !lng
       #Just load the page
+      #render :layout => false
     else
       #perform the search and return results
       @result = venue_search(q, lat, lng)

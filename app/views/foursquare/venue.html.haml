@@ -16,6 +16,8 @@
   %h2
     Sound tracks
   %ul
+    -if @sounds.empty?
+      %li.arrow= link_to "No tracks. Add a new track", search_fs_sound_path(:venue => v["id"])
     -@sounds.each do |s|
       %li.arrow
         =link_to s.name, track_fs_sound_path(:id => s.track)

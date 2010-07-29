@@ -6,7 +6,6 @@
 *   http://www.opensource.org/licenses/mit-license.php
 */
 
-
 var lastVenue;
 
 // Initialize JQTouch
@@ -14,6 +13,14 @@ $.jQTouch({ formSelector:'.form' });
 
 $(document).ready(function(){
   getLocation();
+  /*$('asc-player').scPlayer({ autoPlay: true});
+  alert($('a.sc-player').innerHTML);
+  soundcloud.debug = true;
+  soundcloud.addEventListener('onPlayerReady', function(player, data) {
+    alert(soundcloud.version);
+    player.api_play();
+  });
+  */
   //$.getJSON("http://api.foursquare.com/v1/venues.json?q=&l=1&geolat=40.24&geolong=3.41&callback=?", function(data){alert(""+data);});
 });
 
