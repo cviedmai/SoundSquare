@@ -1,0 +1,56 @@
+--- !ruby/object:Gem::Specification 
+name: multipart
+version: !ruby/object:Gem::Version 
+  version: 0.2.1
+platform: ruby
+authors: 
+- Leonardo Boiko
+autorequire: 
+bindir: bin
+cert_chain: []
+
+date: 2009-04-04 00:00:00 +02:00
+default_executable: 
+dependencies: []
+
+description: Multipart is a gem that adds support to multipart/form-encoded and multipart/mixed (file upload) to Net::HTTP::Post.  Nothing more, nothing less.  Currently it supports a file param with multiple files, but not multiple file params.
+email: leoboiko@gmail.com
+executables: []
+
+extensions: []
+
+extra_rdoc_files: []
+
+files: 
+- multipart.rb
+has_rdoc: true
+homepage: http://rubyforge.org/projects/multipart
+licenses: []
+
+post_install_message: 
+rdoc_options: []
+
+require_paths: 
+- .
+required_ruby_version: !ruby/object:Gem::Requirement 
+  requirements: 
+  - - ">="
+    - !ruby/object:Gem::Version 
+      version: 1.8.3
+  version: 
+required_rubygems_version: !ruby/object:Gem::Requirement 
+  requirements: 
+  - - ">="
+    - !ruby/object:Gem::Version 
+      version: "0"
+  version: 
+requirements: []
+
+rubyforge_project: multipart
+rubygems_version: 1.3.5
+signing_key: 
+specification_version: 2
+summary: add multipart (file upload) support to Net::HTTP::Post
+test_files: []
+
+
